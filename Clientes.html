@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Profissionais</title>
+    <script src="https://unpkg.com/imask"></script>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+           background: linear-gradient(#FDA69B, #FB4E37);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .principal {
+            margin-top: 2%;
+            width: 200%;
+            max-width: 800px;
+            padding: 4px;
+            text-align: center;
+            background-color: #cd42422d;
+            border-radius: 20px;
+            opacity: 0.9;
+        }
+
+        img {
+            width: 300px;
+            height: 3000px;
+            margin: 30px ;
+         
+        }
+
+        h2 {
+            font-size: 25px;
+            color: rgb(252, 253, 255);
+            margin: 20px;
+        }
+
+        p {
+            color: #e2e5ea;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 18px;
+            color: #dfe1e4;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: solid;
+            background-color: #f0f1f2;
+            font-size: 1em;
+            color: #1581b7;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(246, 82, 70, 0.395);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 30px;
+             text-align: center;
+            
+        }
+
+        input[type="button"]:hover {
+
+            background: #8F90A6;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #5c6e77;
+        }
+
+       
+    .banner {
+    background: rgba(155, 22, 22, 0.1);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 0 0 15px 15px;
+}
+.topo {
+    margin-bottom: 20px;
+}
+
+.banner img {
+  width: 500px;
+  height: 200px;
+}
+       
+    </style>
+</head>
+ <div class="banner">
+              <img src="1.png" alt="Imagem"><br><br>
+<body>
+            
+             
+              <div class="principal">
+                <form>
+    <h2>Pessoa</h2>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="telefone" placeholder="Telefone">
+
+    <h2>Cadastro Cliente</h2>
+    <input type="date" id="data" placeholder="Data de nascimento">
+    <input type="text" id="responsavel" placeholder="Responsável">
+    <input type="text" id="cpf" placeholder="CPF">
+    
+    
+    
+
+    <input type="button" value=" SALVAR " id=" cadastrado" onclick="salvar()">
+<input type="button" value=" VOLTAR " id="retorno" onclick="voltar()">
+    </form>
+              </div>
+
+   
+    <script>
+        
+            let cpfmask = IMask(document.getElementById('cpf'),{
+            mask: "000.000.000-00"
+            })
+        
+        function salvar() {
+            alert("Cliente cadastrado com sucesso");
+            
+
+           window.location.reload;
+
+        }
+function voltar(){
+    window.location.href="telaprincipal.html";
+
+            }  
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/">
+    <title>Cadastro de Profissionais</title>
+    
+</head>
+<body>
+
+    <div class="principal">
+        <div class="banner">
+            <img src="1.png" alt="Logo">
+        </div>
+
+        <form>
+            <h2>Pessoa</h2>
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="telefone" placeholder="Telefone">
+
+            <h2>Fornecedor</h2>
+            <input type="text" id="razao" placeholder="Razão Social">
+            <input type="text" id="cnpj" placeholder="CNPJ">
+            
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <input type="button" value="VOLTAR" onclick="voltar()" style="background-color: #8F90A6;">
+                <input type="button" value="SALVAR" onclick="salvar()">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Máscara para Telefone (ajustado para aceitar 8 ou 9 dígitos)
+        IMask(document.getElementById('telefone'), {
+            mask: '(00) 00000-0000'
+        });
+
+        // Máscara correta para CNPJ (00.000.000/0000-00)
+        IMask(document.getElementById('cnpj'), {
+            mask: '00.000.000/0000-00'
+        });
+
+        function salvar() {
+            // Aqui você pode adicionar lógica para validar se os campos estão vazios
+            alert("Fornecedor cadastrado com sucesso!");
+            window.location.reload();
+        }
+
+        function voltar() {
+            window.location.href = "telaprincipal.html";
+        }
+    </script>
+</body>
+</html>

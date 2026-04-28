@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Cadastro de Profissionais</title>
+    <script src="https://unpkg.com/imask"></script>
+    <style>
+        /* Ajuste rápido para os títulos dentro do formulário */
+        h2 {
+            color: white;
+            font-size: 1.2rem;
+            margin: 15px 0 10px 0;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="principal">
+        <div class="banner">
+            <img src="PNG/1.png" alt="Logo">
+        </div>
+
+        <form>
+            <h1>Cadastro</h1>
+
+            <h2>Pessoa</h2>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" placeholder="Ex: João Silva">
+            
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" placeholder="(00) 00000-0000">
+
+            <h2>Fornecedor</h2>
+            <label for="razao">Razão Social:</label>
+            <input type="text" id="razao" placeholder="Nome da Empresa">
+            
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" placeholder="00.000.000/0000-00">
+            
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+                <input type="button" value="SALVAR" onclick="salvar()">
+                <input type="button" value="VOLTAR" onclick="voltar()" style="background-color: #8F90A6;">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Inicializando as máscaras após o carregamento da página
+        const elementTel = document.getElementById('telefone');
+        const maskOptionsTel = {
+            mask: '(00) 00000-0000'
+        };
+        IMask(elementTel, maskOptionsTel);
+
+        const elementCnpj = document.getElementById('cnpj');
+        const maskOptionsCnpj = {
+            mask: '00.000.000/0000-00'
+        };
+        IMask(elementCnpj, maskOptionsCnpj);
+
+        function salvar() {
+            // Validação simples
+            const nome = document.getElementById('nome').value;
+            if(nome === "") {
+                alert("Por favor, preencha ao menos o nome.");
+                return;
+            }
+
+            alert("Fornecedor cadastrado com sucesso!");
+            window.location.reload();
+        }
+
+        function voltar() {
+            window.location.href = "telaprincipal.html";
+        }
+    </script>
+</body>
+</html>

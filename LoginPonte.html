@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Login - Sistema</title>
+</head>
+<body>
+
+    <div class="principal">
+        <div class="banner">
+            <img src="PNG/1.png" alt="Logo">
+        </div>
+
+        <div class="Login">
+            <h1>Efetuar Login</h1>
+
+            <form>
+                <label>Usuário:</label>
+                <input type="text" id="usuario" name="usuario">
+
+                <label>Senha:</label>
+                <input type="password" id="senha" name="senha">
+
+                <input type="button" value="Logar" onclick="fazerLogin()">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function fazerLogin() {
+            // Pegando os valores dos inputs
+            const user = document.getElementById("usuario").value;
+            const pass = document.getElementById("senha").value;
+
+            if (user === "admin" && pass === "admin") {
+                alert("Login de Administrador realizado!");
+                window.location.href = "telaprincipal.html";
+            } 
+            else if (user === "operacional" && pass === "oper2026") {
+                alert("Login Operacional realizado!");
+                window.location.href = "Atendimento.html";
+            } 
+            else {
+                alert("Usuário ou senha incorretos.");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Pessoa e Endereço</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            margin: 20px; 
+            background:linear-gradient(#FDA69B, #FB4E37);; 
+        }
+        .container { 
+            background: #a42c1c2d;; 
+            padding: 20px;
+             border-radius: 8px; 
+             max-width: 500px; 
+             margin: auto; 
+             box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+        h2 {
+             border-bottom: 2px solid #ddd; 
+             padding-bottom: 10px; 
+            }
+        input, select { 
+            width: 100%; 
+            padding: 8px; 
+            margin: 10px 0; 
+            box-sizing: border-box;
+         }
+        button { 
+            background: #8F90A6;
+             color: white; 
+             border: none; 
+             padding: 10px; 
+             width: 100%; 
+             cursor: pointer; 
+        }
+        button:hover { 
+            background: #8F90A6;; 
+        }
+        .resultado {
+             margin-top: 20px; 
+             font-size: 0.9em;
+              background: #eee;
+               padding: 10px; 
+            }
+         .banner {
+    background: rgba(155, 22, 22, 0.1);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 0 0 15px 15px;
+}
+.topo {
+    margin-bottom: 20px;
+}
+
+.banner img {
+  width: 300px;
+  height: 100px;
+}
+    </style>
+</head>
+ <div class="banner">
+              <img src="1.png" alt="Imagem"><br><br>
+<body>
+
+<div class="container">
+    <h2>Cadastro Pessoa</h2>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="telefone" placeholder="Telefone">
+
+    <h2>Endereço</h2>
+    <input type="text" id="logradouro" placeholder="Logradouro">
+    <input type="text" id="numero" placeholder="Número">
+    <input type="text" id="complemento" placeholder="Complemento">
+    <input type="text" id="bairro" placeholder="Bairro">
+    <input type="text" id="cidade" placeholder="Cidade">
+    <input type="text" id="estado" placeholder="Estado">
+    <input type="text" id="cep" placeholder="CEP">
+    <input type="text" id="tipoEndereco" placeholder="Tipo de Endereço (Ex: Residencial)">
+
+ <input type="button" value=" SALVAR  " id="resultado" onclick="salvar()">
+
+
+    
+</div>
+
+<script>
+    function salvar() {
+        
+        const pessoa = {
+            id: Date.now(), 
+            nome: document.getElementById('nome').value,
+            telefone: document.getElementById('telefone').value
+        };
+
+     
+        const endereco = {
+            id: Date.now() + 1,
+            pessoaId: pessoa.id,
+            logradouro: document.getElementById('logradouro').value,
+            numero: document.getElementById('numero').value,
+            complemento: document.getElementById('complemento').value,
+            bairro: document.getElementById('bairro').value,
+            cidade: document.getElementById('cidade').value,
+            estado: document.getElementById('estado').value,
+            cep: document.getElementById('cep').value,
+            tipoEndereco: document.getElementById('tipoEndereco').value
+        };
+
+
+       
+        alert("Dados salvos com sucesso!");
+        window.location.href = "telaprincipal.html";
+    }
+</script>
+
+</body>
+</html>

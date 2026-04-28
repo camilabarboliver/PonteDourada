@@ -1,0 +1,127 @@
+/* --- RESET E GERAL --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#FDA69B, #FB4E37);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- CABEÇALHO E BANNER --- */
+.topo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.banner {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+.menu {
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu li a:hover {
+    background: #fff;
+    color: #FB4E37;
+    transform: translateY(-3px);
+}
+
+/* --- CONTEÚDO E DESTAQUE --- */
+.conteudo {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.destaque {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.destaque h2 {
+    margin-bottom: 20px;
+}
+
+/* --- BOTÕES --- */
+.botao, input[type="button"] {
+    display: inline-block;
+    background-color: #FB4E37;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover, input[type="button"]:hover {
+    background-color: #d43f2a;
+    transform: scale(1.05);
+}
+
+/* --- ESTILO PARA TELAS DE FORMULÁRIO (LOGIN/CADASTRO) --- */
+.principal {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    text-align: center;
+}
